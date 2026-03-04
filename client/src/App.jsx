@@ -1,5 +1,12 @@
+import Navigator from "./routes/Navigator";
+import ThemeWrapper from "./routes/ThemeWrapper";
+
 function App() {
-  return <div className="">{import.meta.env.VITE_MAIN_SERVER}</div>;
+  return (
+    <ThemeWrapper>
+      <Navigator />
+    </ThemeWrapper>
+  );
 }
 
 export default App;
