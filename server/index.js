@@ -1,3 +1,4 @@
+require('dotenv').config();
 const http = require('http');
 const express = require('express');
 const { Server } = require('socket.io');
@@ -27,7 +28,9 @@ io.on('connection', (socket) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Socket.io server is running');
+  res.send(
+    `Socket.io server is running. AUTH_SERVER: ${process.env.AUTH_SERVER || 'not set'}`
+  );
 });
 
 server.listen(PORT, () => {

@@ -1,19 +1,22 @@
 {
-  "name": "server",
+  "name": "service_auth",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon --watch . --ext js,mjs,cjs,ts,json --exec \"node --experimental-transform-types index.js\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@prisma/adapter-pg": "^7.4.2",
+    "@prisma/client": "^7.4.2",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
-    "socket.io": "^4.8.3"
+    "pg": "^8.19.0",
+    "prisma": "^7.4.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
